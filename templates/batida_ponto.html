@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <meta charset="UTF-8">
+    <title>Bater ponto</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Fametro Gym</h1>
+    <h2>Preencha os seus dados:</h2>
+    <form method="POST" action="">
+        Nome: <input type="text" name="usuario"><br><br>
+        Senha: <input type="password" name="senha"><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if texto %}
+        <p>{{ texto }}</p>
+    {% endif %}
+</div>
+</body>
+</html>

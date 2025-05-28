@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Academia</title>
+</head>
+<body>
+    <div class="form-container">
+    <h1>Fametro Gym</h1>
+    <form method="post">
+        <label for="altura">
+            Altura:
+        </label>
+        <input type="text" id="altura" name="altura">
+        <label for="peso">
+            Peso:
+        </label>
+        <input type="text" id="peso" name="peso">
+            <select name="objetivo" id="objetivo" onchange="enviar_dados()" required >
+                <option value ="">--Selecione uma opção</option>
+                <option value="1">Emagrecer</option>
+                <option value="2">Hipertrofia</option>
+                <option value="3">Definição</option>
+            </select>
+            <label for="p1" style="display: none;" id="label1" ></label>
+            <input type="number" name="p1" id="p1" style="display: none;" required/>
+        
+            <label for="p2" style="display: none;" id="label2"></label>
+            <input type="number" name="p2" id="p2" style="display: none;" required/>
+        
+            <label for="p3" style="display: none;" id="label3"></label>
+            <input type="number" name="p3" id="p3" style="display: none;" required/>
+        
+            <label for="p4" style="display: none;" id="label4"></label>
+            <input type="number" name="p4" id="p4" style="display: none;" required/>
+        
+
+        <button type="submit">Enviar</button>
+        <p>{{resposta}}</p>
+    </form>
+</div>
+<script src="{{url_for('static', filename='app.js')}}"></script>
+</body>
+</html>

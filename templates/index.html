@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Fametro Gym</title>
+</head>
+<body>
+    <div class="form-index">
+        <h1>Bem vindos a Fametro Gym</h1>
+        <h2>O que você deseja?</h2>
+        <a href="{{url_for('bater_ponto')}}"><button>Bater ponto</button></a>
+        <a href="{{url_for('acompanhamento')}}"><button>acompanhamento <br> de aluno</button></a>
+        <a href="{{url_for('controle_aluno')}}"><button>Controle de acesso</button></a>
+        <a href="{{url_for('sugestao_treinof')}}"><button>Sugestão de treino</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Controle de alunos</title>
+</head>
+<body>
+    <div class="form-container">
+    <h1>Fametro Gym</h1>
+    
+    <h2>Preencha os dados do aluno:</h2>
+    <form method="POST" action="">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome"><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if texto %}
+        <p>{{ texto }}</p>
+    {% endif %}
+    <a href="{{url_for('index')}}"><p class="index">desejar retornar a pagina principal?</p></a>
+    </div>
+</body>
+
+</html>
