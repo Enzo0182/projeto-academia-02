@@ -33,7 +33,7 @@ def bater_ponto():
 
         if "Ponto registrado com sucesso" in resposta:
             session.pop("tentativa_atual", None)  # Zera tentativas após sucesso
-            return render_template("resultado_sugestao.html", resposta=resposta)
+            return render_template("resultado_batida_ponto.html", resposta=resposta)
         elif "Número máximo de tentativas atingido. Registro de ponto não realizado." in resposta:
             session.pop("tentativa_atual", None)  # Zera tentativas após sucesso
             return render_template("resultado_batida_ponto.html", resposta=resposta)
@@ -115,11 +115,13 @@ def cadastro():
         cpf = request.form.get("cpf")
         objetivo = request.form.get("objetivo")
         cadastro_de_aluno.adicionar_aluno(nomeCadastro, idade, telefone, email, cpf, objetivo)
-
-        return redirect(url_for("index"))  # redireciona para acompanhamento ou onde preferir
-
+        return render_template("cadastro.html")
     return render_template("cadastro.html")
 
+@app.route("/alunos")
+def alunos():
+    lista = cadastro_de_aluno.listar_alunos()
+    return render_template("lista_aluno.html", resposta=f'{lista}<br>')
 
 
 if __name__ == '__main__':

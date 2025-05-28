@@ -20,7 +20,7 @@ body, html {
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(255, 255, 0, 0.6);
   width: 100%;
-  min-width: 400px;
+  min-width: 600px;
   max-width: 80%;  /* não deixa passar de 400px */
   box-sizing: border-box;
   align-items: center;
@@ -73,6 +73,8 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="password"],
+input[type="email"],
+input[type="tel"],
 select {
   padding: 0.6rem;
   margin-bottom: 1.2rem;

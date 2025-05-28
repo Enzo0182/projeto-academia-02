@@ -70,5 +70,6 @@ def adicionar_aluno(nome, idade, telefone, email, cpf, objetivo):
     alunos.append(aluno)
 
 def listar_alunos():
-    return alunos
+    return [str(aluno) for aluno in alunos]
+
 
