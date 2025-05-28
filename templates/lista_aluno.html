@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='academia.png')}}" type="image/png">
     <title>Fametro Gym</title>
 </head>
 <body>
     <div class="form-resposta">
     <form action="">
         <h1>Fametro Gym</h1>
-        <h2>{{resposta | safe}}</h2>
+        <h2>{{resposta | safe}}</h2><br><br>
+        <a href="{{url_for('cadastro')}}" class="index">Voltar ao cadastro</a>
     </form>
 
 </div>
